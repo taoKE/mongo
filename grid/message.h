@@ -4,6 +4,8 @@
 
 #include "../util/sock.h"
 
+#include <cstring>
+ //Looking for the end of the current word/number
 class Message;
 
 class MessagingPort {

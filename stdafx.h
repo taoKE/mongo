@@ -19,6 +19,7 @@ typedef char _TCHAR;
 
 #include <iostream>
 #include <fstream>
+#include <cstring>
 using namespace std;
 
 #if !defined(_WIN32)
