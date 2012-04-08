@@ -3,6 +3,8 @@
 #pragma once
 
 #include "../util/sock.h"
+#include <string.h>
+#include <stdlib.h>
 
 class Message;
 

@@ -10,6 +10,8 @@
 #include "assert.h"
 #include <stdio.h>
 #include <sstream>
+#include <string.h>
+#include <stdlib.h>
 
 //#if defined(_WIN32)
 //#include <tchar.h>
