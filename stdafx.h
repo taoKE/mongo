@@ -10,6 +10,7 @@
 #include "assert.h"
 #include <stdio.h>
 #include <sstream>
+#include <cstdlib>
 
 //#if defined(_WIN32)
 //#include <tchar.h>
@@ -42,3 +43,4 @@ typedef void *HANDLE;
 
 #define null (0)
 
+#include <vector>

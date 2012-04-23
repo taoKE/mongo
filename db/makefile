@@ -1,8 +1,8 @@
 # makefile for our db project
 
-FLAGS=-I .. -I/opt/java/include/ -I/opt/java/include/linux -Isrc/p -I/src/p/db
+FLAGS=-I .. -I/opt/java/include/ -I/opt/java/include/linux -Isrc/p -I/src/p/db -g
 
-OBJS=../stdafx.o ../util/sock.o ../grid/message.o ../util/mmap.o pdfile.o query.o
+OBJS=../stdafx.o ../util/sock.o ../grid/message.o ../util/mmap.o pdfile.o query.o jsobj.o
 
 .cpp.o:
 	g++ -c $(FLAGS) $< -o $@
