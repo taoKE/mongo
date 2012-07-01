@@ -2,9 +2,9 @@
 #  assumption - Java JDK installed at /opt/java
 #
 
-FLAGS += -I/opt/java/include/ -I/opt/java/include/linux  
+FLAGS += -I/etc/alternatives/java_sdk_1.6.0/include -I/etc/alternatives/java_sdk_1.6.0/include/linux  
 
-JVM_LIBS += -L/opt/java/jre/lib/amd64/server -L/opt/java/jre/lib/amd64 \
-         -Xlinker -rpath -Xlinker /opt/java/jre/lib/amd64/server  \
-         -Xlinker -rpath -Xlinker /opt/java/jre/lib/amd64  \
+JVM_LIBS += -L/etc/alternatives/java_sdk_1.6.0/jre/lib/amd64/server -L/etc/alternatives/java_sdk_1.6.0//jre/lib/amd64 \
+         -Xlinker -rpath -Xlinker /etc/alternatives/java_sdk_1.6.0/jre/lib/amd64/server  \
+         -Xlinker -rpath -Xlinker /etc/alternatives/java_sdk_1.6.0/jre/lib/amd64  \
          -ljvm -ljava -L/usr/lib64

@@ -1,16 +1,16 @@
 # makefile for our db project
 
-FLAGS= ${CFLAGS} -fPIC -fno-strict-aliasing -ggdb -pthread -O3 -Wall -Wsign-compare -Wno-non-virtual-dtor -I .. -L/usr/local/lib -L/usr/lib -rdynamic
+FLAGS= ${CFLAGS} -fPIC -fno-strict-aliasing -ggdb -pthread -O3 -Wall -Wsign-compare -Wno-non-virtual-dtor -I .. -L/usr/local/lib64 -L/usr/lib64 -rdynamic -I../pcre-7.4/
 #FLAGS= ${CFLAGS} -fPIC -fno-strict-aliasing -ggdb -pthread -O0 -Wall -Wsign-compare -Wno-non-virtual-dtor -I .. -L/usr/local/lib -L/usr/lib -rdynamic
 
-LIB_DEPS = -lpcrecpp -lpcre
-LIB_BOOST = -lboost_thread -lboost_filesystem -lboost_program_options
+LIB_DEPS = -L/usr/lib64 -lpcrecpp -lpcre
+LIB_BOOST = -L/usr/lib64 -lboost_thread-mt -lboost_filesystem-mt -lboost_system-mt -lboost_program_options
 
 LIBS= $(LIB_DEPS) $(LIB_BOOST) -lstdc++
 DBGRID_LIBS = $(LIB_BOOST) -lstdc++
 DBTEST_LIBS= $(LIBS) -lunittest
 
-JVM_LIBS = -L/opt/java/lib/
+JVM_LIBS = -L/etc/alternatives/java_sdk_1.6.0/lib/
 
 OBJS=../stdafx.o ../util/sock.o ../grid/message.o ../util/mmap.o pdfile.o query.o jsobj.o introspect.o btree.o clientcursor.o ../util/util.o javajs.o tests.o json.o repl.o ../client/dbclient.o btreecursor.o cloner.o namespace.o commands.o matcher.o dbcommands.o dbeval.o ../util/background.o ../util/miniwebserver.o dbwebserver.o dbinfo.o instance.o dbhelpers.o
 
